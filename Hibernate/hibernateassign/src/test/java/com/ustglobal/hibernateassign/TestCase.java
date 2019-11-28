@@ -1,0 +1,10 @@
+package com.ustglobal.hibernateassign;
+
+public class TestCase {
+
+
+	public TestCase(String testName) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

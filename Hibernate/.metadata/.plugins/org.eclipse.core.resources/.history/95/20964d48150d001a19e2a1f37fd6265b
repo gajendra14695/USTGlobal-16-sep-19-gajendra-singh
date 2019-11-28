@@ -1,0 +1,16 @@
+package com.ustglobal.jpawithhibernateapp.manytomany;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Course {
+	
+	@Id
+	private int cid;
+	@Column
+	private String cname;
+	
+
+}

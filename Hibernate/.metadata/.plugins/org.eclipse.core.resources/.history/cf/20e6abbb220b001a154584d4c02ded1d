@@ -1,0 +1,13 @@
+package com.ustglobal.demoproject;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        Student s = new Student();
+    }
+}

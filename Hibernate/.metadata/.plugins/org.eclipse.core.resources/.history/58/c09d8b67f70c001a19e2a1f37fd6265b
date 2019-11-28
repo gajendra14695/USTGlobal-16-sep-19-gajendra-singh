@@ -1,0 +1,15 @@
+package com.ustglobal.jpawithhibernateapp.onetomany;
+
+import javax.persistence.Entity;
+
+import lombok.Data;
+
+@Data
+@Entity
+public class PencilBox {
+
+	private int bid;
+	private String bname;
+	
+	
+}

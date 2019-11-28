@@ -1,0 +1,9 @@
+package com.ustglobal.jpawithhibernateapp;
+
+public class ReattachingDemo {
+
+	
+	public static void main(String[] args) {
+		
+	}
+}

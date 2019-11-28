@@ -1,0 +1,31 @@
+package com.ustglobal.praticeapp;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.ustglobal.practiceapp.dto.Mobile;
+
+public class InsertMobile {
+
+	public static void main(String[] args) {
+		
+		
+		Mobile m = new Mobile();
+	
+		m.setNum(1234);
+		m.setName("samsung");
+		m.setModel("M30");
+		
+		EntityManagerFactory emf= Persistence.createEntityManagerFactory("test");//it store the record in the  data base 
+		EntityManager em = emf.createEntityManager();//it will connect with database;
+		EntityTransaction et = em.getTransaction();//
+		et.begin();
+		em.persist(m);
+		System.out.println(" Record Saved Succesfully");
+		
+		et.commit();
+		em.close();
+	}
+}

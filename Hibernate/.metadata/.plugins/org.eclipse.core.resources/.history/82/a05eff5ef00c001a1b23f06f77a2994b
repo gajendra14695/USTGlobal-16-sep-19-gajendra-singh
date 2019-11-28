@@ -1,0 +1,28 @@
+package com.ustglobal.jpawithhibernateapp.onetoone;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import lombok.Data;
+
+@Entity
+//@Data
+public class VoterCard {
+
+	@Id
+	private int vid;
+	private String name;
+	public int getVid() {
+		return vid;
+	}
+	public void setVid(int vid) {
+		this.vid = vid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

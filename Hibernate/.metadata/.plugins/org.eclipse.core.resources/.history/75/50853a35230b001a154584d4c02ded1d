@@ -1,0 +1,17 @@
+package com.ustglobal.demoproject;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        Student s = new Student();
+        s.setId(1);
+        s.setGender("male");
+        s.setName("Gajendra Singh");
+        s.setColor("black");
+    }
+}

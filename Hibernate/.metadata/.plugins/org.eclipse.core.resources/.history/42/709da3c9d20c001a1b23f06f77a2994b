@@ -1,0 +1,50 @@
+package com.ustglobal.jpawithhibernateapp.jpql;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+public class InsertQuery {
+
+	
+	public static void main(String[] args) {
+		EntityManager entityManager=null;
+		EntityTransaction entityTransaction=null;
+		
+		try {
+			EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("TestPersistence");
+		 entityManager=entityManagerFactory.createEntityManager();
+			 entityTransaction=entityManager.getTransaction();
+					entityTransaction.begin();
+			
+					
+					entityManager.createNativeQuery("")
+				      .setParameter(1, person.getId())
+				      .setParameter(2, person.getFirstName())
+				      .setParameter(3, person.getLastName())
+				      .executeUpdate();
+					
+					
+					
+					
+					
+					
+					
+					
+			String jpql="INSERT INTO person (id, first_name, last_name) VALUES (?,?,?) ";
+			Query query= entityManager.createQuery(jpql);
+			
+			int result=query.executeUpdate();
+			System.out.println("Update record  "+result);
+			entityTransaction.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			entityTransaction.rollback();
+		}finally {
+			entityManager.close();
+		}
+		
+	}
+}

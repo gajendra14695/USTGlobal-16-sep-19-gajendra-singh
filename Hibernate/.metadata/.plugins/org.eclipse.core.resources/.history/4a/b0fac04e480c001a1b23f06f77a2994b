@@ -1,0 +1,9 @@
+package com.ustglobal.jpawithhibernateapp.jpql;
+
+public class UpdateQuery {
+
+	
+	public static void main(String[] args) {
+		
+	}
+}

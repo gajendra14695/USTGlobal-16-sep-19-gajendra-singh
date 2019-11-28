@@ -1,0 +1,21 @@
+package com.ustglobal.jpawithhibernateapp.onetoone;
+
+public class VoterCard {
+
+
+	private int vid;
+	private String name;
+	public int getVid() {
+		return vid;
+	}
+	public void setVid(int vid) {
+		this.vid = vid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

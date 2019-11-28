@@ -1,0 +1,23 @@
+package com.ustglobal.jpawithhibernateapp.manytomany;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+import lombok.Data;
+@Data
+@Entity
+public class Course {
+	
+	@Id
+	private int cid;
+	@Column
+	private String cname;
+	
+	@ManyToMany(mappedBy="course")
+	private List<Student1> student1;
+
+}
