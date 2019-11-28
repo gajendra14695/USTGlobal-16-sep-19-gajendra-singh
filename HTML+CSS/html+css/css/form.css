@@ -1,0 +1,54 @@
+form{
+    border: 1px solid black;
+    width: 350px;
+    height: 350px;
+    margin: 100px 0 0 900px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Courier New';
+    border-radius: 25px;
+    background-image: url(/image/giphy.gif);
+    background-size:cover;
+    color: white;
+
+    
+}
+body{
+    background-image: url(/image/giphy\ \(1\).gif);
+    background-size: cover;
+    /* -moz-backface-visibility: visible; */
+    
+    
+}
+h1{
+    /* background-color: blue; */
+    color: green;
+}
+label{
+    color:red;
+}
+/* input[type="text"]:focus,input[type="password"]:focus{ */
+    /* outline: none; */
+/* } */
+input[type="text"],input[type="password"]{
+    width: 250px;
+    height: 25px;
+    border: 2px solid blanchedalmond;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 15px;
+    outline: none;
+}
+
+input[type="Submit"]{
+    margin-top: 20px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+}
+input[type="submit"]:hover{
+    background-color: red;
+    color:green;
+    border: 2px solid black;
+}

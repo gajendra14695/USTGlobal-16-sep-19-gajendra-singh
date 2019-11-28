@@ -1,0 +1,14 @@
+img{
+    width: 250px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 40px;
+    padding: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+    box-shadow: 10px  10px 15px blueviolet;
+    transition: all 1.5s;
+}
+img:hover{
+    transform: scale(1.1,1.1);
+}

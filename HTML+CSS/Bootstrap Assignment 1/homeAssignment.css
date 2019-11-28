@@ -1,0 +1,18 @@
+.cnt{
+    height: 60px;
+
+    background-color: black;
+}
+.cnt1{
+    margin-left: 30%;
+    font-family: cursive;
+    font-size :bold;
+    font-weight: 600px;
+}
+figure{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}

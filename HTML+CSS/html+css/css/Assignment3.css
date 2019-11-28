@@ -1,0 +1,192 @@
+figure{
+    margin-left: 20px;
+    width: 100%;
+    padding: 20px 20px;
+}
+#grad{
+    height: 550px;
+    background-image: url("/html+css/image/photo-1526228446530-49914082ff8a.jpg");
+    background-size: cover;
+}
+h1{
+    padding-top: 15px;
+    font-weight: 100;
+    margin-top: 5px;
+    padding-left: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aliceblue;
+}
+h1:hover{
+    
+    cursor: pointer;
+}
+h3{
+    
+    font-size: 15px;
+    font-weight: 100;
+    padding-left: 150px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+h3:hover{
+    
+    cursor: pointer;
+}
+
+h2{
+    
+    font-size: 40px;
+    font-weight: 100;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+input{
+    width: 600px;
+    border-radius: 20px;
+}
+
+h4{
+     font-size: 15px;
+     padding-left: 220px;
+     color: rgb(202, 200, 200);
+}
+h4:hover{
+    
+    cursor: pointer;
+}
+::placeholder
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: gray;
+    text-align: center;
+}
+img{
+    width:300px;
+    height:250px;
+    border: 1px solid black;
+    /* padding: 5px; */
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+    transition:all 2s;
+    
+    
+  }
+/* img:hover{
+          transform: scale(1.1,1.1);
+          transition:all 1s;
+
+          
+
+
+        } */
+input[type="submit"]{
+    width: 230px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: rgb(72, 179, 77);
+    color: aliceblue;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-left: 600px;
+    margin-top: 50px;
+    font-weight: bold;
+    
+    
+
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    
+}
+#ab{
+    color: rgba(71, 70, 70, 0.979);
+    margin-left: 250px;
+    margin-top: 50px;
+    font-size: 30px;
+}
+#abc{
+    color: rgba(71, 70, 70, 0.979);
+    margin-left: 250px;
+    margin-right: 200px;
+    margin-top: 50px;
+    font-size: 18px;
+    
+}
+
+  
+   
+
+#asd{
+    margin-top: 50px;
+    margin-left: 450px;
+    color:rgb(80, 80, 80);
+}
+#qwe{
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;
+    color:rgb(80, 80, 80);
+    font-size: 20px;
+
+}
+#zxc{
+    width: 230px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: rgb(72, 179, 77);
+    color: aliceblue;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 450px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    
+
+    }
+#zxc:hover{
+    cursor: pointer;
+}
+#input{
+    margin-right: 20px;
+    background-color: white;
+    padding-right: 100px;
+}
+#abcd{
+    margin-left: 350px;
+    height: 50px;
+    width: 150px;
+    background-image: url("/html+css/image/WhatsApp\ Image\ 2019-09-26\ at\ 3.53.14\ PM.jpeg");
+    background-size: cover;
+
+
+
+}
+#cba{
+    margin-left: 20px;
+    height: 50px;
+    width: 150px;
+    background-image: url("/html+css/image/WhatsApp\ Image\ 2019-09-26\ at\ 3.53.14\ PM.jpeg");
+    background-size: cover;
+
+}
+#pq:hover{
+    cursor: pointer;
+}
+#pqr:hover{
+    cursor: pointer;
+}
+
+
+#input{
+    background-color:white ;
+    border:1px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
