@@ -1,0 +1,38 @@
+<p>assignmentthree works!</p>
+<!-- <p>register works!</p> -->
+<!-- <h1>Register Component</h1> -->
+
+<form action="" class="col-md-4 offset-4 mt-5 md-5 card card-body bg-warning" #form = "ngForm" (ngSubmit)="loginform(form)" >
+        <h1 class="text-center bg-success text-danger">User Details Form</h1>
+        <div class="form-group">
+            <input type="text" name="email" id="email" class="form-control " placeholder="User Name......" #text = "ngModel" ngModel required >
+            <div *ngIf="text.touched && text.invalid">
+                <p class="alert alert-danger" *ngIf="text.errors.required">*</p>
+
+        </div> 
+        </div>
+        <div class="form-group">
+            <input type="text" name="password" id="password" class="form-control" placeholder="user page.......">
+            
+        </div>
+        <h4>Gender</h4>
+        <form action="" >
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+              </form>
+              <br>
+        <div class="form-group">
+                <input type="email" name="email" id="email" class="form-control " placeholder="User Email......" >
+               
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" id="password" class="form-control" placeholder="password">
+            </div>
+            <div class="form-group">
+                <input type="password" name="re-password" id="re-password" class="form-control" placeholder="retype-password">
+            </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-success float-right" >Add User</button>
+        </div>
+    </form>

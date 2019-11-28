@@ -1,0 +1,7 @@
+<div class="col-md-4 mt-4 card card-body float-left">
+    <div class="card card-body" *ngFor ="let bikes of Bikes">
+        <img src="{{bikes.imgurl}}" alt="" (click) = "sendbikes(bikes)">
+        <h1 class=" text-center">{{bikes.name}}</h1>
+    </div>
+</div>
+<app-child-bikes [bikes]="selectedbikes"></app-child-bikes>

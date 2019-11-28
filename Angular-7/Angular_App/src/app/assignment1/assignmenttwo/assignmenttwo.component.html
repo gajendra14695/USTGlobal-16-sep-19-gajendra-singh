@@ -1,0 +1,39 @@
+<p>assignmentthree works!</p>
+<!-- <p>register works!</p> -->
+<!-- <h1>Register Component</h1> -->
+
+<form action="" class="col-md-4 offset-4 mt-5 md-5 card card-body bg-success" #form = "ngForm" (ngSubmit)="loginform(form)" >
+        <h1 class="text-center bg-success text-danger">User Details Form</h1>
+        <div class="form-group">
+            <input type="text" name="name" id="name" class="form-control " placeholder="Candidate Name......"  #text = "ngModel" ngModel required>
+            <div *ngIf="text.touched && text.invalid">
+                <p class="alert alert-danger" *ngIf="text.errors.required">*</p>
+
+        </div> 
+        </div>
+        <div class="form-group">
+            <input type="number" name="number" id="number" class="form-control" placeholder="year of passout.......">
+            
+        </div>
+        <h4>Skill</h4>
+        <form action="" >
+                <input type="radio" name="gender" value="java"> java
+                <input type="radio" name="gender" value="Spring"> Spring
+                <input type="radio" name="gender" value="c,c++"> C,C++
+              </form>
+              <br>
+        <div class="form-group">
+                <input type="text" name="nmae" id="name" class="form-control " placeholder="C C T C......" >
+               
+            </div>
+            <div class="form-group">
+                <input type="text" name="name" id="name" class="form-control" placeholder="B C T C" >
+                
+            </div>
+            <div class="form-group">
+                <input type="text" name="re-password" id="re-password" class="form-control" placeholder="Ready to Register">
+            </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-danger float-right" >Shedule Interval</button>
+        </div>
+    </form>

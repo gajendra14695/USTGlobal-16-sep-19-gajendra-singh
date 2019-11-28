@@ -1,0 +1,49 @@
+<p>assignmentone works!</p>
+<!-- <p>register works!</p> -->
+<!-- <h1>Register Component</h1> -->
+
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form = "ngForm" (ngSubmit)="companyForm(form)" >
+        <h1 class="text-center bg-dark text-white"> Company Register </h1>
+        <div class="form-group">
+            <br>
+            <input type="text" name="text" id="companyname" class="form-control " placeholder="Company Name......" #text = "ngModel" ngModel required >
+        <div *ngIf="text.touched && text.invalid">
+                <p class="alert alert-danger" *ngIf="text.errors.required">*</p>
+
+        </div>   
+        </div>
+            <div class="form-group">
+                    <!-- <input type="text" name="text" id="companyname" class="form-control " placeholder="Company Name......"> -->
+                    <h5>Skill
+                    <select class=" df float-right">
+                            <option value="" selected disabled hidden>Choose here</option>
+                            <option value="1">java</option>
+                            <option value="2">J2ee</option>
+                            <option value="3">Spring</option>
+                            <option value="4">Angular</option>
+                            <option value="5">Advance Java</option>
+                          </select>
+                        </h5> 
+                   
+            </div>
+            <div class="form-group">
+                    <input type="number" name="text" id="number" class="form-control " placeholder="Year of Exp......" #number ="ngModel" ngModel required minlength="2">
+                    <div *ngIf="number.touched && number.invalid">
+                                <p class="alert alert-danger" *ngIf= "number.errors.required" >*This Field is required</p>
+                                <p class="alert alert-danger"*ngIf= "number.errors.minlength">*Minimun length should be 2</p>
+                            </div>
+                </div>
+                    <div class="form-group">
+                            <input type="text" name="text" id="name" class="form-control " placeholder="M C T C......">
+                            </div>
+
+
+                            <div class="form-group">
+                                    <input type="text" name="address" id="address" class="form-control " placeholder="Location......">
+                                    </div>
+   
+        
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-success float-right" > Add Register</button>
+        </div>
+    </form>
