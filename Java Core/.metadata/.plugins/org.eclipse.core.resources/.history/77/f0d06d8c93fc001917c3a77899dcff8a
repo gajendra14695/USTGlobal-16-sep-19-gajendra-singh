@@ -1,0 +1,24 @@
+package com.ustglobal.collectionframework.list;
+
+import java.util.ArrayList;
+
+public class TestA {
+public static void main(String[] args) {
+	ArrayList al = new ArrayList();
+	
+	al.add(1);
+	al.add(45.6);
+	al.add("gajendra");
+	al.add(null);
+	al.add(true);
+	al.get(2);
+	System.out.println(al);
+	for (int i = 0; i < 5; i++) {
+
+		Object obj = al.get(i);
+		System.out.println(obj);
+	}
+	
+	
+}
+}

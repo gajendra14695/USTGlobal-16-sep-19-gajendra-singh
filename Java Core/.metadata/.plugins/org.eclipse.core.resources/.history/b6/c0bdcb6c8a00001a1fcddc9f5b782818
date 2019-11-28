@@ -1,0 +1,40 @@
+package com.ustglobal.jdbcapp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.jdbc.Driver;
+
+public class ExecuteInsertQuery {
+
+		
+	public static void main(String[] args) {
+		
+		Connection conn= null;
+		Statement stmt = null;
+		//ResultSet rs= null;
+		
+		try {
+			//step 1
+			Driver driver=new Driver();
+			DriverManager.registerDriver(driver);
+			
+			//Step2 get the connection
+//			String url ="Jdbc:mysql://localhost:3306/ust_ty_db";
+//			conn = DriverManager.getConnection(url,"root","root");//method overloading 
+	String url ="Jdbc:mysql://localhost:3306/ust_ty_db";
+	conn=DriverManager.getConnection(url,"root", "root");
+		
+		//step 3 
+	//
+
+	String sql ="insert into employee_info values(5,'mia Khalifa',450000,'m')";
+	//rs = stmt.executeQuery(sql);
+	stmt=conn.createStatement();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+	}//end of main()
+}//end of ExecuteInsertQuery

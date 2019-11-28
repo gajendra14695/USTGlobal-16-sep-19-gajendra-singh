@@ -1,0 +1,27 @@
+package com.ustglobal.maps;
+
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+
+public class TestC {
+
+		
+		public static void main(String[] args) {
+			
+			LinkedHashMap<String , Integer> lh = new LinkedHashMap<String , Integer>();
+		
+		lh.put("Bangaloer", 560076);
+		lh.put(
+				 "Hariyana", 134203);
+		lh.put("patna", 800001);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		}
+}

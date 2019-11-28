@@ -1,0 +1,32 @@
+package com.ustglobal.thread.pausing;
+
+public class TestA {
+	
+		Object obj1 = new Object();
+		Object obj2 = new Object();
+		Runnable r1 =() -> {
+			synchronized (obj1) {
+				System.out.println("T1 Started ");
+				System.out.println("T1 has locked obj1 ");
+				
+				synchronized (obj2) {
+					System.out.println("T1 has locked obj2 ");
+					
+				}
+			}
+			System.out.println("T1 finished ");
+		};
+		
+		Runnable r2 =() -> {
+			synchronized (obj2) {
+				System.out.println(" T2 Started ");
+				System.out.println(" T2 has locked obj2 ");
+				
+				synchronized (obj1) {
+					System.out.println(" T2 has locked obj1 ");
+					
+				}
+			}
+			System.out.println("T2 finished ");
+		};
+}

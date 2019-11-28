@@ -1,0 +1,72 @@
+package com.ustglobal.jdbcapp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.jdbc.Driver;
+
+public class ExecuteUpdateQuery {
+public static void main(String[] args) {
+	
+	Connection conn = null;
+	Statement stmt =null;
+	ResultSet rs = null;
+	PreparedStatement pstmt=null;
+	try {
+		Driver driver = new Driver();
+		DriverManager.registerDriver(driver);
+		String url ="Jdbc:mysql://localhost:3306/ust_ty_db";
+		conn =DriverManager.getConnection(url, "root", "root");
+		String sql= "update employee_info set name='bharat',sal=500000 ,gender='m' where id=?";
+
+		stmt=conn.createStatement();
+		int count = stmt.executeUpdate(sql);
+		System.out.println(count);
+		String sql1 ="select * from employee_info where id=6";
+		rs = stmt.executeQuery(sql1);
+	
+
+		String id= args[0];
+		int sal = Integer.parseInt(id);
+		pstmt.setInt(1, sal);
+
+		int count = pstmt.executeUpdate();
+		System.out.println(count);
+
+
+	
+//		while(rs.next()) {
+//			
+//			int id = rs.getInt("id");
+//			String name =rs.getString("name");
+//			int sal =rs.getInt("sal");
+//			String gender = rs.getString("gender");
+//			
+//			System.out.println("Id      :"+id);
+//			System.out.println("name    :"+name);
+//			System.out.println("salary  :"+sal);
+//			System.out.println("gender  :"+gender);
+//			System.out.println("******************************");
+//			}
+		
+	}catch(SQLException e) {
+		e.printStackTrace();
+	}finally {
+		try{
+			if(conn!=null) {
+		}
+			conn.close();
+		if(stmt!=null) {
+			stmt.close();
+		}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}
+}

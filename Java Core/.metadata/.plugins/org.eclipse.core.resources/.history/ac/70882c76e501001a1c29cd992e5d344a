@@ -1,0 +1,12 @@
+package com.ustglobal.filehandling;
+
+import java.io.FileReader;
+import java.sql.Connection;
+
+public class CSVReader {
+
+		public static void main(String[] args) {
+			FileReader reader= null;
+			Connection conn=null;
+		}
+}

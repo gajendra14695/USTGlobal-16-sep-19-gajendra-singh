@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.ustglobal.relation&apos; to &apos;com.ustglobal.hasarelation.weak&apos;&#x0D;&#x0A;- Original project: &apos;Has-A-relation&apos;&#x0D;&#x0A;- Original element: &apos;Has-A-relation/src/com.ustglobal.relation&apos;&#x0D;&#x0A;- Renamed element: &apos;Has-A-relation/src/com.ustglobal.hasarelation.weak&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.ustglobal.relation&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.ustglobal.relation" name="com.ustglobal.hasarelation.weak" qualified="false" references="true" stamp="1571988514550" textual="false" version="1.0"/>
+</session>

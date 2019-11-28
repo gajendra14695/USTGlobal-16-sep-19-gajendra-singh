@@ -1,0 +1,15 @@
+package com.ustglobal.filehandling;
+
+import java.io.FileReader;
+
+public class PropertiesFileReader {
+ public static void main(String[] args) {
+	String path="text.properties";
+	FileReader reader= null;
+	try {
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+}
+}

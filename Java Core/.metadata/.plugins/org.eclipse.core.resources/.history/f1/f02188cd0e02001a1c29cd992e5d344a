@@ -1,0 +1,9 @@
+package com.ustglobal.empapp.dto;
+
+public class EmployeeBean {
+	private int id;
+	private String name;
+	private int sal;
+	private String gender;
+
+}

@@ -1,0 +1,23 @@
+package com.ustglobal.filehandling;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReadingClass {
+	 public static void main(String[] args) throws IOException {
+		String path ="C:\\Users\\rajpu\\Desktop\\gajju.txt";
+		FileReader reader=null;
+		try {
+		 reader = new FileReader(path);
+		 int i;
+		 while('\0'==(char)(i=reader.read())) {
+		
+		System.out.print(reader.read());
+		 }
+		} catch (FileNotFoundException e) {
+		
+			e.printStackTrace();
+		}
+	}
+}

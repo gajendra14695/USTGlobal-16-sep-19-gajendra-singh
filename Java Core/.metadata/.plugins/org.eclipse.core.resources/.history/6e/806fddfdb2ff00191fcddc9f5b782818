@@ -1,0 +1,11 @@
+package com.ustglobal.java8features;
+
+public class TestB {
+			
+		public static void main(String[] args) {
+			
+			Student s = new Student(1, "sumit", 45.6);
+			
+			
+		}
+}

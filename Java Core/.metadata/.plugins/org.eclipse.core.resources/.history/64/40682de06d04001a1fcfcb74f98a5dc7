@@ -1,0 +1,17 @@
+package com.ustglobal.thread.pausing;
+
+public class testCounter {
+
+	public static void main(String[] args) {
+
+		Counter c = new Counter();
+		Runnable r1= () ->{
+			c.increment();
+			c.decrement();
+		};
+		Runnable r2 = ()->{
+			c.decrement();
+			c.increment();
+		};
+	}
+}

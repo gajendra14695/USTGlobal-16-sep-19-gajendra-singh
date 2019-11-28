@@ -1,0 +1,21 @@
+package com.ustglobal.maps;
+
+import java.util.Hashtable;
+
+public class TestG {
+	
+		public static void main(String[] args) {
+			
+			Hashtable<Integer , String> ht = new Hashtable<Integer, String>();
+			ht.put(500, "ajay");
+			ht.put(102, "vijay");
+			ht.put(100, "sonu");
+			ht.put(99, "rahul");
+			ht.put(101, "monu");		
+			//ht.put(null, "john");
+			// ht.put(103, null);
+			 
+				System.out.println("Data "+ht);
+		
+		}
+}

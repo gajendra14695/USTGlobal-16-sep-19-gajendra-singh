@@ -1,0 +1,7 @@
+
+public class TestG {
+final add()
+{
+	System.out.println("Add() method");
+}
+}

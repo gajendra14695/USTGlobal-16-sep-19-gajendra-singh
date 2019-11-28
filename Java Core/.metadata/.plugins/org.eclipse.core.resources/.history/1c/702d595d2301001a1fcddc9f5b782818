@@ -1,0 +1,12 @@
+package com.ustglobal.jdbcapp;
+
+import java.sql.DriverManager;
+
+public class ExecuteDynamicSelectQuerry {
+
+	public static void main(String[] args) {
+		
+		String url ="Jdbc:mysql://localhost:3306/ust_ty_db";
+		conn =DriverManager.getConnection(url, "root", "root");
+	}
+}

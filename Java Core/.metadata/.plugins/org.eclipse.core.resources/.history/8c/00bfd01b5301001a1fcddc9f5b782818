@@ -1,0 +1,5 @@
+url=jdbc:mysql://localhost:3306/ust_ty_db
+user= root
+pass= root
+driver-class-name=com.mysql.jdbc.Driver
+select-query=update employee_info set name ='fgh',sal=3000,gender='m'  where id=3

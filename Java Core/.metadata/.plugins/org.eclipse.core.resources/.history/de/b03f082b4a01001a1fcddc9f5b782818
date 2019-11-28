@@ -1,0 +1,3 @@
+url=Jdbc:mysql://localhost:3306/ust_ty_db
+user= root
+pass= root

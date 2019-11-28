@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class SpecialNum {
+public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+	int num =sc.nextInt();
+	System.out.println("Special number is "+spe(num));
+	
+}
+static boolean spe(int n) {
+	int sum=0;
+	while(n>0) {
+		int r=n%10;
+		int d=n/10;
+		sum= (r+d)+(r*d);
+		
+	}
+	return sum==n;
+}
+}

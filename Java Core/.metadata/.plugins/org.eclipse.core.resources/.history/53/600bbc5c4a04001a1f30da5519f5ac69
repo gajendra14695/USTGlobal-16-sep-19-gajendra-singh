@@ -1,0 +1,11 @@
+package com.ustglobal.thread.defining;
+
+public class MyRunable implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("run method");
+	}
+
+}

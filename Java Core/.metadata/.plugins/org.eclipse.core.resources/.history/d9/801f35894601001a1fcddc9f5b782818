@@ -1,0 +1,7 @@
+package com.ustglobal.filehandling;
+
+public class PropertiesFileReader {
+ public static void main(String[] args) {
+	
+}
+}

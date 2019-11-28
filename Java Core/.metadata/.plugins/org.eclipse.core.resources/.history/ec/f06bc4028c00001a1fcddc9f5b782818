@@ -1,0 +1,8 @@
+package com.ustglobal.jdbcapp;
+
+public class ExecuteUpdateQuery {
+public static void main(String[] args) {
+	
+	
+}
+}

@@ -1,0 +1,16 @@
+package com.ustglobal.thread.defining;
+
+public class My_Thread  extends Thread{
+	public static void main(String[] args) {
+
+		System.out.println("Started main ");
+
+		String tname= Thread.currentThread().getName();
+		System.out.println("current thread "+tname);
+		Thread.currentThread().setName("chacha");
+
+		System.out.println(10/0);
+		System.out.println("ended main ");
+
+	}
+}

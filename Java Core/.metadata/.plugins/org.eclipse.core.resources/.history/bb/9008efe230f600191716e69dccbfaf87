@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class SpecialNum {
+public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+	int num =sc.nextInt();
+boolean b = spe(num);
+if(b==true) {
+	System.out.println("Special Number is "+num);
+}else
+{
+	System.out.println("Not Special Number");
+}
+	
+}
+static boolean spe(int n) {
+	int sum=0 ,a=n;
+	while(n>0) {
+		int r=n%10;
+		int d=n/10;
+		sum= (r+d)+(r*d);
+		
+	}
+	System.out.println(sum);
+	return sum==a;
+}
+}

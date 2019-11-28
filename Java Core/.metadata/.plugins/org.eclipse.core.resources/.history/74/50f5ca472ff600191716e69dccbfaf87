@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class NeturalNum {
+public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+	int num =sc.nextInt();
+	
+}
+public void netural(int n) {
+	int sum=o;
+	for(int i=0;i<=n;i++) {
+		sum=sum+i;
+		
+	}
+	System.out.println("Sum of the Natural number is "+sum);
+}
+}

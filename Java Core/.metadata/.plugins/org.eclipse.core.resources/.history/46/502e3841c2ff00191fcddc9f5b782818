@@ -1,0 +1,34 @@
+package com.ustglobal.streams.list;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class TestE {
+	
+		public static void main(String[] args) {
+			
+
+			ArrayList<Integer > marks = new ArrayList<Integer>();
+			marks.add(20);
+			marks.add(23);
+			marks.add(5);
+			marks.add(12);
+			marks.add(4);
+			marks.add(24);
+			
+			
+			
+			List<Integer> l=
+					marks.stream().filter(i->i<40).collect(Collectors.toList());
+
+
+			//System.out.println(l);
+int count=0;
+			for (Integer integer : l) {
+				System.out.println(integer);
+				count++;
+			}
+			System.out.println(count);
+		}
+}

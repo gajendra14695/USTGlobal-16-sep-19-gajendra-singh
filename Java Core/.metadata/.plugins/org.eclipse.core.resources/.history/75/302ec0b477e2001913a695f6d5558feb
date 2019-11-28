@@ -1,0 +1,16 @@
+package mypack;
+
+public class Pen implements Comparable {
+String color;
+double Price;
+public  Pen(String color, double Price) {
+	this.color=color;
+	this.Price=Price;
+	
+}
+@Override
+public int compareTo(Object arg0) {
+	// TODO Auto-generated method stub
+	return 0;
+}
+}

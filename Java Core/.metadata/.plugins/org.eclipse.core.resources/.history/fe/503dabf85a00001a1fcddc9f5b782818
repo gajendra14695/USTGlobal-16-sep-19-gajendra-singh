@@ -1,0 +1,13 @@
+package com.ustglobal.jdbcapp;
+
+import java.sql.*;
+//import java.sql.Statement;
+
+public class MyFirstJDBC {
+			
+		public static void main(String[] args) {
+			
+			Connection conn = null;
+			Statement stmt = null;
+		}
+}

@@ -1,0 +1,12 @@
+package com.ustglobal.sorting.set;
+
+import java.util.PriorityQueue;
+
+public class PriorityTestJ {
+		
+		public static void main(String[] args) {
+			
+			PriorityQueue  pq = new PriorityQueue();
+			
+		}
+}

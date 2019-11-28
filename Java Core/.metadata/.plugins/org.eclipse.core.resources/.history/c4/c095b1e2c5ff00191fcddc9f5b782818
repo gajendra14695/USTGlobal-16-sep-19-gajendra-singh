@@ -1,0 +1,12 @@
+package com.ustglobal.java8features;
+
+import java.util.ArrayList;
+
+public class TestS {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Student> al= new ArrayList<Student>();
+		
+	}
+}

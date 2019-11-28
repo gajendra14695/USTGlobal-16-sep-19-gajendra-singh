@@ -1,0 +1,7 @@
+package com.ustglobal.sorting.set;
+
+import java.util.Comparator;
+
+public class SortByCustSalary implements Comparator<Customer>{
+
+}

@@ -1,0 +1,9 @@
+
+public class SubClass  extends SuperClass{
+String s="subclasss variable";
+SubClass()
+{
+	//super();
+	System.out.println("sub class constructor");
+}
+}

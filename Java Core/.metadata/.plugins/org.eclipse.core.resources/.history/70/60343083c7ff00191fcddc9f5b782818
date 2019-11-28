@@ -1,0 +1,18 @@
+package com.ustglobal.java8features;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Helper {
+
+	void display(ArrayList<Student> al) {
+		Iterator<Student > it = al.iterator();
+		while(it.hasNext()) {
+			Student i = it.next();
+			System.out.println("Id is "+i.id);
+			System.out.println("name is "+i.name);
+			System.out.println("percentage is "+i.percentage);
+		System.out.println("=======================================");
+		}
+	}
+}

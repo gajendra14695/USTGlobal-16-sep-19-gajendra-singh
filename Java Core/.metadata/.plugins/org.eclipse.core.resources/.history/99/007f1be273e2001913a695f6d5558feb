@@ -1,0 +1,24 @@
+package mypack;
+
+public class Student implements Comparable {
+
+	@Override
+	public int compareTo(Object arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+int id;
+String name;
+Double per;
+
+public Student(int id, String name,Double per)
+{
+	this.id=id;
+	this.name=name;
+	this.per=per;
+}
+public String toString() {
+	return " "+id+","+name+","+per +", ";
+}
+
+}

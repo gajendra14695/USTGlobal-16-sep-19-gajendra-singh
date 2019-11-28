@@ -1,0 +1,15 @@
+package com.ustglobal.maps;
+
+public class TestF {
+
+		
+		public static void main(String[] args) {
+			
+			Student s1= new Student(2, "divya", 67.98);
+			Student s2= new Student(3, "riya", 56.98);
+			Student s2= new Student(3, "riya", 56.98);
+			Student s2= new Student(3, "riya", 56.98);
+			Student s2= new Student(3, "riya", 56.98);
+		
+		}
+}

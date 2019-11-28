@@ -1,0 +1,27 @@
+package mypack;
+
+import java.util.PriorityQueue;
+
+public class MainC10 {
+	public static void main(String[] args) {
+		PriorityQueue pq=new PriorityQueue( new salComparator());
+		pq.offer(new Employee(123,"Green",122343));
+		pq.offer(new Employee(123,"Green",122343));
+		pq.offer(newEmployee(123,"Green",122343));
+		pq.offer(new Employee(123,"Green",122343));
+		pq.offer(newEmployee(123,"Green",122343));
+		System.out.println(pq);
+		System.out.println(pq.poll());
+		
+		for(Object obj :pq) {
+			System.out.println(obj);
+			
+		}
+		System.out.println("======================================");
+		System.out.println(pq.poll());
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++");
+		
+	}
+
+
+}

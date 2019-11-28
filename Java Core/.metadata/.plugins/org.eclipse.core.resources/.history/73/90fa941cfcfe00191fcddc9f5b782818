@@ -1,0 +1,35 @@
+package com.ustglobal.sorting.set;
+
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class TestI {
+	 	
+		public static void main(String[] args) {
+			
+			SortByName sb = new SortByName();
+			SortByPincode sp = new SortByPincode();
+			SortByMicr sm = new SortByMicr();
+			TreeSet<Bank> ts = new TreeSet<Bank>(sp);
+			
+			
+			ts.add(new Bank("HDFC",55001,678908));
+			ts.add(new Bank("SBI",47002,56568908));
+			ts.add(new Bank("CITI",21003,90678908));
+			ts.add(new Bank("CANARA",56004,3478908));
+			ts.add(new Bank("CANARA",56004,3478908));
+			
+			System.out.println("======================================");
+
+			Iterator<Bank> it = ts.iterator();
+			while(it.hasNext()) {
+				Bank e = it.next();
+				System.out.println("ID is "+e.pincode);
+				System.out.println("name is "+e.name);
+				System.out.println("Salary is "+e.micr);
+				System.out.println("=============================================");
+				
+			}
+		}
+}

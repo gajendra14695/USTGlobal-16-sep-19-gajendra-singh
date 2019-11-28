@@ -1,0 +1,5 @@
+package com.ustglobal.empapp.dao;
+
+public class EmployeeDAOImpl {
+
+}
