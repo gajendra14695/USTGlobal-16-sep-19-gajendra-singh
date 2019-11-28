@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    top: 20%;
+    left: 40%;
+    right: 50%;
+    position: absolute;
+    transform: translate();
+}
+.fa{
+    position: absolute;
+    right: 380px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #999;
+}
+.fa.action{
+    color: dodgerblue;
+}
+img{
+    border: black;
+    height: 50px;
+    width: 50px;
+}
