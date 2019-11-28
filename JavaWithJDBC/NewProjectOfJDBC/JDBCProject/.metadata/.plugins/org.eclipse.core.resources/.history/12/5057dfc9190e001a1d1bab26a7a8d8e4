@@ -1,0 +1,94 @@
+package com.ustglobal.projectwithjdbcapp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class LogicOfProject {
+
+	
+	public void getAllEmployee() throws Exception {
+
+		String url ="jdbc:mysql://localhost:3306/ust_ty_db?user=root&password=root";
+		String sql="select *from employee_info ";
+		Connection conn = null;
+		Statement stmt= null;
+		ResultSet rs=null;
+		Class.forName("com.mysql.jdbc.Driver");
+		conn=DriverManager.getConnection(url);
+		stmt=conn.createStatement();
+		rs=stmt.executeQuery(sql);
+		System.out.println("Connection succes ");
+		while(rs.next()) {
+			System.out.println("id is      :"+rs.getInt("id"));
+			System.out.println("name is    :"+rs.getString("name"));
+			System.out.println("salary is  :"+rs.getInt("sal"));
+			System.out.println("gender is  :"+rs.getString("gender"));
+			System.out.println("**************************************");
+		}
+
+	}
+	public void getInsertEmployee(int id ,String name , int sal , String gender) throws Exception {
+
+
+		String url ="jdbc:mysql://localhost:3306/ust_ty_db?user=root&password=root";
+		String sql="insert into employee_info values(?,?,?,?) ";
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		Class.forName("com.mysql.jdbc.Driver");
+		conn=DriverManager.getConnection(url);
+		pstmt=conn.prepareStatement(sql);
+
+		pstmt.setInt(1, id);
+		pstmt.setString(2, name);
+		pstmt.setInt(3, sal);
+		pstmt.setString(4, gender);
+		int count = pstmt.executeUpdate();
+		System.out.println("row afferct "+count);
+		System.out.println(" insert success ");
+
+	}
+	public void getUpdateEmployee(int id ,String name , int sal , String gender) throws Exception {
+		String url ="jdbc:mysql://localhost:3306/ust_ty_db?user=root&password=root";
+		String sql="update employee_info set name=? , sal =? , gender = ? where id=? ";
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		Class.forName("com.mysql.jdbc.Driver");
+		conn=DriverManager.getConnection(url);
+		pstmt=conn.prepareStatement(sql);
+
+
+		pstmt.setString(1, name);
+		pstmt.setInt(2, sal);
+		pstmt.setString(3, gender);
+		pstmt.setInt(4, id);
+		int count = pstmt.executeUpdate();
+		System.out.println(count +" update sucess ");
+
+
+	}
+	public void getDeleteEmployee() throws Exception{
+		String url ="jdbc:mysql://localhost:3306/ust_ty_db?user=root&password=root";
+		String sql="delete from employee_info where id =?";
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		Scanner sc= new Scanner(System.in);
+		Class.forName("com.mysql.jdbc.Driver");
+		conn=DriverManager.getConnection(url);
+		pstmt=conn.prepareStatement(sql);
+		pstmt=conn.prepareStatement(sql);
+		System.out.println("Enter id : ");
+		int id = sc.nextInt();
+
+
+
+		pstmt.setInt(1, id);
+
+		int count = pstmt.executeUpdate();
+		System.out.println(count+"Row Success");
+
+	}
+}
