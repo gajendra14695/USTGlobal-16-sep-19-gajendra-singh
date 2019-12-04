@@ -1,5 +1,6 @@
 package com.ustglobal.springrst.controller;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,50 +15,143 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ustglobal.springrst.dto.EmployeeBean;
+import com.ustglobal.springrst.dto.EmployeeResponse;
 import com.ustglobal.springrst.service.EmployeeService;
 
 @RestController
 public class EmployeeController {
-	
+
 	@Autowired
 	private EmployeeService service;
 
 	@PostMapping(path="/add" ,
 			consumes = MediaType.APPLICATION_JSON_VALUE ,
 			produces = MediaType.APPLICATION_JSON_VALUE )
-	public boolean addEmployee(@RequestBody EmployeeBean bean) {
+	public EmployeeResponse addEmployee(@RequestBody EmployeeBean bean) {
 
+		EmployeeResponse response= new EmployeeResponse();
+		if(service.addEmployee(bean))
+		{
+			response.setStatusCode(201);
+			response.setMessage("Success");
+			response.setDescription("Data added to the DB");
+		}else
+		{
+			response.setStatusCode(401);
+			response.setMessage("Failure");
+			response.setDescription("Data not added to the  DB");
 
-		return service.addEmployee(bean);
+		}
+
+		return response;
 	}//end of addEmployee
 
 	@PutMapping(path="/modify" , 
 			consumes = MediaType.APPLICATION_JSON_VALUE ,
 			produces = MediaType.APPLICATION_JSON_VALUE )
-	public boolean modifyEmployee(@RequestBody EmployeeBean bean) {
-		return service.modifyEmployee(bean);
+	public EmployeeResponse modifyEmployee(@RequestBody EmployeeBean bean) {
+		EmployeeResponse response= new EmployeeResponse();
+
+		if(service.modifyEmployee(bean))
+		{
+			response.setStatusCode(201);
+			response.setMessage("Success");
+			response.setDescription("Data modify to the DB");
+		}else
+		{
+			response.setStatusCode(401);
+			response.setMessage("Failure");
+			response.setDescription("Data notmodify to the  DB");
+
+		}
+
+		return response;
+		//return service.modifyEmployee(bean);
 	}//end of modifyEmployee
 
 	@DeleteMapping(path="/delete/{id}" , 
 			produces = MediaType.APPLICATION_JSON_VALUE )
-	public boolean deleteEmployee(@PathVariable("id") int id) {
+	public EmployeeResponse deleteEmployee(@PathVariable("id") int id) {
 
-		return service.deleteEmployee(id);
+		EmployeeResponse response= new EmployeeResponse();
+
+		if(service.deleteEmployee(id))
+		{
+			response.setStatusCode(201);
+			response.setMessage("Success");
+			response.setDescription("Data deleted to the DB");
+		}else
+		{
+			response.setStatusCode(401);
+			response.setMessage("Failure");
+			response.setDescription("Data not deleted to the  DB");
+
+		}
+
+		return response;
 
 	}// end of  deleteEmployee
 
 	@GetMapping(path="/get" , produces = MediaType.APPLICATION_JSON_VALUE)
-	public EmployeeBean getEmployee(@RequestParam("id") int id) {
+	public EmployeeResponse getEmployee(@RequestParam("id") int id) {
 
-		return service.getEmployee(id);
+		EmployeeResponse response= new EmployeeResponse();
+		EmployeeBean bean=service.getEmployee(id);
+		
+		if(bean!=null) {
+			
+			response.setStatusCode(201);
+			response.setMessage("Success");
+			response.setDescription("Data found in the DB");
+			response.setEmployeeBeans(Arrays.asList(bean));
+			
+		}else {
+			response.setStatusCode(401);
+			response.setMessage("Failure");
+			response.setDescription("Data not found in the  DB");
+
+			
+		}
+		
+		return response;
 
 	}//end of getEmployee
 
 	@GetMapping(path="/get-all",
 			produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<EmployeeBean> getAllEmployee(){
-		return service.getAllEmployee();
+	public EmployeeResponse getAllEmployee(){
+		
+
+		EmployeeResponse response= new EmployeeResponse();
+		List<EmployeeBean> beans=service.getAllEmployee();
+		
+		if(!beans.isEmpty()) {
+			
+			response.setStatusCode(201);
+			response.setMessage("Success");
+			response.setDescription("Data found in the DB");
+			response.setEmployeeBeans(beans);
+			
+		}else {
+			response.setStatusCode(401);
+			response.setMessage("Failure");
+			response.setDescription("Data not found in the  DB");
+
+			
+		}
+		
+		return response;
+
+		
+		
+		
+		
 	}//end of getAllEmployee
 
+	@GetMapping(path="/exce" , produces = MediaType.APPLICATION_JSON_VALUE)
+	public void creataException() {
+		int i=1/0;
+		
+	}
 
 }//end of EmployeeController
