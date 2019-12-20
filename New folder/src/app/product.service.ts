@@ -12,7 +12,7 @@ export class ProductService {
     return this.http.put<any>('http://localhost:8080/addProduct', product);
   }
   getAllProducts() {
-    return this.http.get<any>('http://localhost:8080/get-all');
+    return this.http.get<any>('http://localhost:8080/getallProduct');
   }
   updateProduct(product) {
     return this.http.put<any>('http://localhost:8080/updateProduct',product);
