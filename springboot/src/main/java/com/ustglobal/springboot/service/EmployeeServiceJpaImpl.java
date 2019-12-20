@@ -26,7 +26,7 @@ public class EmployeeServiceJpaImpl implements EmployeeService {
 	@Override
 	public boolean modifyEmployee(EmployeeBean bean) {
 		// TODO Auto-generated method stub
-		repo.update(bean.getName(), bean.getPassword(), bean.getDoj(), bean.getGender());
+		repo.update(bean.getName(), bean.getPassword(), bean.getDoj(), bean.getGender() ,bean.getId());
 		return true;
 	}
 

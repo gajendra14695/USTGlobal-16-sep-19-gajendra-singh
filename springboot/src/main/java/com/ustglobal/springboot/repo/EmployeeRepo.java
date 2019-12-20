@@ -16,8 +16,8 @@ import com.ustglobal.springboot.dto.EmployeeBean;
 public interface EmployeeRepo extends  JpaRepository<EmployeeBean, Integer> {
 	@Transactional
 	@Modifying
-	@Query("update EmployeeBean set name=:name,passwoed=:password,gender=:gender,doj=:doj,gender=:gender")
-	public void update(String name,String password,Date doj, String gender);
+	@Query("update EmployeeBean set name=:name,passwoed=:password,gender=:gender,doj=:doj,gender=:gender where id=:id")
+	public void update(String name,String password,Date doj, String gender ,int id);
 	
 	
 	
