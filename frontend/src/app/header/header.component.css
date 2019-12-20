@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    font-size: 30px;
+
+}
+#page{
+    position: absolute;
+    background-size: cover;
+    top:100px;
+    margin-left: 200px;
+    
+}

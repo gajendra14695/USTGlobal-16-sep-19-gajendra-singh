@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand text-light" routerLink="/add-book">Add Books</a>
+    <a class="navbar-brand text-light" routerLink="/display-book">Display Books</a>
+    <a class="navbar-brand text-light" routerLink="/search-Book">Search Book</a>
+    <a class="navbar-brand text-light" routerLink="/getall">Display User</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<form class="col-md-4 offset-4 mt-2 card card-body" #form="ngForm" (ngSubmit)="addBooks(form)">
+    <h1 align="center">Add Book</h1>
+    <div class="form-group">
+        Book Name:<br>
+        <input type="text" name="bookName" id="bookName" class="form-control" placeholder="Enter Book name" #bookName="ngModel" ngModel
+            required>
+        <div *ngIf="bookName.touched && bookName.invalid">
+            <p class="alert alert-danger" *ngIf="bookName.errors.required">*This field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        First Author:<br>
+        <input type="text" name="author1" id="author1" class="form-control" pattern="[A-Za-z]{3,}"
+            title="author should not contain any digits" placeholder="Enter First Author Name" #author1="ngModel" ngModel
+            required>
+        <div *ngIf="author1.touched && author1.invalid">
+            <p class="alert alert-danger" *ngIf="author1.errors.required">*This field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        Second Author:<br>
+        <input type="text" name="author2" id="author2" class="form-control" pattern="[A-Za-z]{3,}"
+            title="author name should not contain any digits" placeholder="Enter Second Author Name" #author2="ngModel" ngModel
+            required>
+        <div *ngIf="author2.touched && author2.invalid">
+            <p class="alert alert-danger" *ngIf="author2.errors.required">*This field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        Publisher:<br>
+        <input type="text" name="publisher" id="publisher" class="form-control" pattern="[A-Za-z]{3,}"
+            title="publisher name should not contain any digits" placeholder="Enter Publisher Name" #publisher="ngModel" ngModel
+            required>
+        <div *ngIf="publisher.touched && publisher.invalid">
+            <p class="alert alert-danger" *ngIf="publisher.errors.required">*This field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        Year Of Publication:<br>
+        <input type="number" name="yearOfPublication" id="yearOfPublication" class="form-control"
+            placeholder="Enter year" #yearOfPublication="ngModel" ngModel required>
+        <div *ngIf="yearOfPublication.touched && yearOfPublication.invalid">
+            <p class="alert alert-danger" *ngIf="yearOfPublication.errors.required">*This field is required</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Add Book</button>
+    </div>
+</form>

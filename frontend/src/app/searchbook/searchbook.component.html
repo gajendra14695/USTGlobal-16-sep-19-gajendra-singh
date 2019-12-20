@@ -1,0 +1,110 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand text-light" routerLink="/add-book">Add Books</a>
+    <a class="navbar-brand text-light" routerLink="/display-book">Display Books</a>
+    <a class="navbar-brand text-light" routerLink="/search-book">Search Book</a>
+    <a class="navbar-brand text-light" routerLink="/getall">Display User</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <div class="form-group card card-body col-md-4 offset-4 mt-3">
+    <input type="search" name="search" id="search" class="form-control" placeholder="Search by name" [(ngModel)]='search'>
+  </div>
+  <div class="card card-body">
+    <table class="table table-bordered mt-2 table-hover " style="border-style: solid; border-width: 1px;">
+      <thead class="thead-dark">
+        <tr class="text-center text-dark">
+          <th>Book ID</th>
+          <th>Book Name</th>
+          <th>Author1</th>
+          <th>Author2</th>
+          <th>Publisher</th>
+          <th>Year Of Publication</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let book of books  | filter: search'>
+          <td>{{book.bid}}</td>
+          <td>{{book.bookName}}</td>
+          <td>{{book.author1}}</td>
+          <td>{{book.author2}}</td>
+          <td>{{book.publisher}}</td>
+          <td>{{book.yearOfPublication}}</td>
+          <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+              (click)="selectUser(book)">
+              Edit
+            </button>
+            <div class="col-md-6 offset-4">
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body" *ngIf="selectedUser">
+                    <form class="col-md-10 offset-1 mt-4 card card-body" #form="ngForm" (ngSubmit)="updateData(form)">
+                      <h3 align="center">Update Book</h3>
+                      <input type="hidden" name="bid" #bid="ngModel" ngModel requried [(ngModel)]="selectedUser.bid">
+                      <div class="form-group">
+                        Book Name:<br>
+                        <input type="text" name="bookName" id="bookName" class="form-control"
+                          placeholder="Enter Book name" #bookName="ngModel" ngModel  requried [(ngModel)]="selectedUser.bookName">
+                        <div *ngIf="bookName.touched && bookName.invalid">
+                          <p class="alert alert-danger" *ngIf="bookName.errors.required">*This field is required</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        First Author:<br>
+                        <input type="text" name="author1" id="author1" class="form-control"
+                          placeholder="Enter First Author Name" #author1="ngModel" ngModel  requried [(ngModel)]="selectedUser.author1">
+                        <div *ngIf="author1.touched && author1.invalid">
+                          <p class="alert alert-danger" *ngIf="author1.errors.required">*This field is required</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        Second Author:<br>
+                        <input type="text" name="author2" id="author2" class="form-control"
+                          placeholder="Enter Second Author Name" #author2="ngModel" ngModel required  requried [(ngModel)]="selectedUser.author2">
+                        <div *ngIf="author2.touched && author2.invalid">
+                          <p class="alert alert-danger" *ngIf="author2.errors.required">*This field is required</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        Publisher:<br>
+                        <input type="text" name="publisher" id="publisher" class="form-control"
+                          placeholder="Enter Publisher Name" #publisher="ngModel" ngModel required  requried [(ngModel)]="selectedUser.publisher">
+                        <div *ngIf="publisher.touched && publisher.invalid">
+                          <p class="alert alert-danger" *ngIf="publisher.errors.required">*This field is required</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        Year Of Publication:<br>
+                        <input type="number" name="yearOfPublication" id="yearOfPublication" class="form-control"
+                          placeholder="Enter year" #yearOfPublication="ngModel" ngModel required  requried [(ngModel)]="selectedUser.yearOfPublication">
+                        <div *ngIf="yearOfPublication.touched && yearOfPublication.invalid">
+                          <p class="alert alert-danger" *ngIf="yearOfPublication.errors.required">*This field is required
+                          </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <button type="button" class="btn btn-primary float-right"[disabled]="form.invalid">Update</button>
+                    </div>
+                      </form>              
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </td>
+          <td><button type="submit" class="btn btn-outline-success" (click)="deleteBook(book)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    
